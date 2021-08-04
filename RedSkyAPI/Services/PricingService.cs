@@ -7,6 +7,9 @@ using RedSkyAPI.Interfaces;
 
 namespace RedSkyAPI.Services
 {
+    /* Pricing Service
+     * This handles interaction with the MongoDB to fetch/update prices
+     */
     public class PricingService : IPricingService
     {
         private readonly IMongoCollection<PricingModel> _prices;

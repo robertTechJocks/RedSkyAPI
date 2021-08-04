@@ -4,6 +4,9 @@ using RedSkyAPI.Interfaces;
 using RedSkyAPI.Models;
 namespace RedSkyAPI.Services
 {
+    /* Product Service
+     * Aggregates data from other services to return the combined model
+     */
     public class ProductService : IProductService
     {
         private readonly IRedSkyService _redSkyService;
@@ -19,13 +22,15 @@ namespace RedSkyAPI.Services
         {
             RedSkyResponse redSkyResponse = await _redSkyService.FetchProductAsync(id);
 
+            //If we can't find a product from the API we won't be able to find a price, so return
             if(redSkyResponse.product == null)
             {
                 return new Product();
             }
             PricingModel pricingModel = _pricingService.Get(id);
 
-            if(pricingModel == null)
+            //Return with a null price, we'll tell the API caller that we can't find a price
+            if (pricingModel == null)
             {
                 return new Product
                 {
