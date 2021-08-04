@@ -12,14 +12,14 @@ This can be tested via Swagger by going to [this url](https://redskyapi.azureweb
 > Response body:
 >
 >```
-{
-    "id": 13860428,
-    "name": "The Big Lebowski (Blu-ray)",
-    "currentPrice": {
-        "value": 10.1,
-        "currencyCode": "USD"
-    }
-}
+>{
+>    "id": 13860428,
+>    "name": "The Big Lebowski (Blu-ray)",
+>    "currentPrice": {
+>        "value": 10.1,
+>        "currencyCode": "USD"
+>    }
+>}
 >```
 
 - PUT https://redskyapi.azurewebsites.net/Products
@@ -27,13 +27,13 @@ This can be tested via Swagger by going to [this url](https://redskyapi.azureweb
 >
 > Example Payload: 
 >```
-{
-    "id": 54456119,
-    "name": "Creamy Peanut Butter 40oz - Good &#38; Gather&#8482;",
-    "currentPrice": {
-        "value": 60.02,
-        "currencyCode": "USD"
-    }
-}
+>{
+>    "id": 54456119,
+>    "name": "Creamy Peanut Butter 40oz - Good &#38; Gather&#8482;",
+>    "currentPrice": {
+>        "value": 60.02,
+>        "currencyCode": "USD"
+>    }
+>}
 >```
 
